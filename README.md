@@ -10,3 +10,5 @@
 <p>Esta aplicación permite mejorar la protección de la información, al realizar la encriptación y desencriptación de los datos, con una interfas simple e intuitiva </p>
 
 
+
+<p align="center">![fotoApp](https://github.com/user-attachments/assets/7f2ac20c-b8d7-41d7-ba15-a16a4b53b7d2)</p>
