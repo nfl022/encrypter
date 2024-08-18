@@ -30,4 +30,4 @@
 
 ## Aplicación
 
-<img src="https://github.com/user-attachments/assets/00f69da4-9e89-43a9-8ac2-266577eca624" width="700" height="auto" alt="gif">
+<img src="https://github.com/user-attachments/assets/00f69da4-9e89-43a9-8ac2-266577eca624" width="800" height="auto" alt="gif">
