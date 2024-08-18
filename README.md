@@ -7,5 +7,6 @@
 <p align=""><img src="https://img.shields.io/github/stars/camilafernanda?style=social"></p>
 
 <p>Proyecto desarrollado como parte del desafío para el curso Oracle Next-One, en colaboración con Alura LATAM</p>
-<p>Esta aplicación permite mejorar la protección de la información, al realizar la encriptación y desencriptación de los datos_</p>
+<p>Esta aplicación permite mejorar la protección de la información, al realizar la encriptación y desencriptación de los datos, con una interfas simple e intuitiva </p>
+
 
