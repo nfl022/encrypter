@@ -37,6 +37,19 @@
 ## Aplicación
 
 <p align="center"><img src="https://github.com/user-attachments/assets/00f69da4-9e89-43a9-8ac2-266577eca624" width="800" height="auto" alt="gif"></p
+
+##
                                                                                                                                                   
 ## Herramientas Utilizadas
-<p align="center"><img src="https://github.com/user-attachments/assets/3b930b11-4958-4110-96aa-859eced8f2f4" width="50" height=""auto></p>
+
+<a href=""><img src="https://github.com/user-attachments/assets/3b5bdc43-b565-4aa9-a131-cd48dccb9bc0" width="50" height="auto">
+<a href=""><img src=https://github.com/user-attachments/assets/600e1d89-b311-4311-ac7f-10285b371c23 width="50" height="auto">
+<a href=""><img src=https://github.com/user-attachments/assets/58d22c2e-44ee-425b-a768-ed6bbee696ac width="50" height="auto">
+
+##
+
+## Acceso al proyecto 
+
+## Desarrollador
+| <img src="https://github.com/user-attachments/assets/9ae02086-ef5d-47bc-b099-a75241b0a989" width=115><br><sub>Nelson Figueroa</sub> |
+| :---: | 
