@@ -1,0 +1,285 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root{
+    --color-primario: #ECE5E4;
+    --color-secundario: #EBEBEB;
+
+}
+*{
+    
+    margin: 0;
+    padding: 0;
+    color: #545959;
+}
+
+body{
+    box-sizing: border-box;
+    background: white;
+    color: white;
+    background-position: center;
+    background-size: cover;
+   
+}
+
+.title{
+    padding: 15px;
+    border-top: 1px solid var(--color-primario);
+    border-bottom: 1px solid var(--color-primario); 
+    font-size: 12px;
+    display: flex;
+    }
+.titulo{
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.cuerpo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    position: relative;
+}
+.contenido{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;  
+}
+
+.contenedorInput, .output1{
+    width:700px;
+    height: 280px;
+    display: flex;
+    border: 1px solid var(--color-primario) ;
+    border-radius: 8px;
+    padding: 4% 5% 8% 4%;
+    box-sizing: border-box;
+    resize: none;
+    outline: none;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    font-family: "Roboto", static;
+    font-size: 1.5rem;
+    font-weight: 350;
+ 
+      
+}
+
+.output1{
+    background: #f5f5f5;
+    border: none;
+    
+
+}
+
+.input1-wrapper, .output1-wrapper{
+    position: relative;
+    flex-grow: 1;
+    
+}
+
+
+.swap{
+    height: 23px;
+    width: 23px;
+    border-radius: 10px;
+    
+}
+.botonSwap{
+    height: 30px;
+    width: 23px;    
+    border: 1px;
+    border-radius: 50%;
+    position: absolute;
+    background: none;
+  
+    padding-bottom: 1%;
+    top: 50px;
+    border: none;
+}
+
+.botonSwap:hover{
+    background-color: var(--color-secundario);
+}
+.botonBorrar{
+    
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+     right:20px;
+     top: 30px;
+     color:#A3ACBF;
+     border-radius: 50%;
+ }
+.botonBorrar:hover{
+    background-color: var(--color-secundario);
+}
+
+.botonKopiar{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    position: absolute;
+    top: 230px;
+    right: 20px;
+    border: none;
+    display: none;   
+}
+.botonKopiar:hover{
+    background-color: var(--color-secundario);
+}
+
+.copy{
+    height: 25px;
+    width: 25px;
+    border-radius: 10px;
+}
+
+.contadorTexto{
+   
+    position: absolute;
+    top: 247px;
+    right: 16px;
+    resize: none;
+    overflow-y: none;
+    overflow-x: none;
+    pointer-events: none;
+    text-align: center;
+    width: 4rem;
+    height: 1rem;
+    border: none;
+}
+    
+@media (max-width: 1427px) {
+ 
+ .title{
+    padding: 20px;
+}
+.cuerpo{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.contenido{
+    flex-direction: row;
+    padding: 1vh;
+    flex-shrink: 1;
+    
+
+}
+.contenedorInput, .output1{
+    width: 95vh
+}
+}
+@media (max-width: 1200px) {
+    .title{
+        padding: 20px;
+    }
+    .cuerpo{
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .contenido{
+        flex-direction: row;
+        padding: 1vh;
+        flex-shrink: 1;
+        
+
+    }
+    .contenedorInput, .output1{
+        width: 95vh
+    }
+}
+@media (max-width: 1133px) {
+    .title{
+        padding: 20px;
+    }
+    .cuerpo{
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .contenido{
+        flex-direction: row;
+        padding: 1vh;
+        flex-shrink: 1;
+        
+
+    }
+    .contenedorInput, .output1{
+        width: 90vh
+    }
+}
+@media (max-width: 963px) {
+    .title{
+        padding: 20px;
+    }
+    .cuerpo{
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .contenido{
+        flex-direction: row;
+        padding: 1vh;
+        flex-shrink: 1;
+        
+
+    }
+    .contenedorInput, .output1{
+        width: 85vh
+    }
+}
+
+@media (max-width: 700px) {
+    .title{
+        padding: 40px;
+    }
+    .cuerpo{
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .contenido{
+        flex-direction: column;
+        padding: 2vh;
+        flex-shrink: 1;
+        
+
+    }
+    .contenedorInput, .output1{
+        width: 90vh
+    }
+}
+@media (max-width: 400px) {
+    .title{
+        padding: 40px;
+    }
+    .cuerpo{
+        
+        align-items: center;
+        justify-content: center;
+     
+        
+    }
+    .contenido{
+        flex-direction: column;
+        padding: 2vh;
+        flex-shrink: 1;
+        
+        
+
+    }
+    .contenedorInput, .output1{
+        width: 30vh
+    }
+}
