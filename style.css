@@ -44,22 +44,26 @@ body{
     align-items: center;
     padding: 80px;
     position: relative;
+    
 }
 .contenido{
     
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 10px;  
+    gap: 10px;
+    
+    
 }
 
 .contenedorInput, .output1{
     width:700px;
-    height: 280px;
+    min-height: 280px;
+    height: auto;
     display: flex;
     border: 1px solid var(--color-primario) ;
     border-radius: 8px;
-    padding: 4% 5% 8% 4%;
+    padding: 4% 5% 5% 4%;
     box-sizing: border-box;
     resize: none;
     outline: none;
@@ -68,23 +72,30 @@ body{
     font-family: "Roboto", static;
     font-size: 1.5rem;
     font-weight: 350;
+    flex-grow: 1;
  
       
 }
+.contenedorInput{
+    position: relative;
+}
+
 
 .output1{
     background: #f5f5f5;
     border: none;
-    
 
+}
+.output-wrapper{
+    position: relative;
+    flex-grow: 1;
+    padding-bottom: 20px;
 }
 
 .input1-wrapper, .output1-wrapper{
     position: relative;
     flex-grow: 1;
-    
 }
-
 
 .swap{
     height: 23px;
@@ -128,8 +139,8 @@ body{
     width: 35px;
     border-radius: 50%;
     position: absolute;
-    top: 230px;
-    right: 20px;
+    bottom: 5px;
+    right: 18px;
     border: none;
     display: none;   
 }
@@ -146,7 +157,7 @@ body{
 .contadorTexto{
    
     position: absolute;
-    top: 247px;
+    bottom: 15px;
     right: 16px;
     resize: none;
     overflow-y: none;
@@ -162,6 +173,7 @@ body{
  
  .title{
     padding: 20px;
+    width: 1600px;
 }
 .cuerpo{
     align-items: center;
@@ -182,6 +194,7 @@ body{
 @media (max-width: 1200px) {
     .title{
         padding: 20px;
+        width: 1500px;
     }
     .cuerpo{
         align-items: center;
@@ -222,6 +235,7 @@ body{
 @media (max-width: 963px) {
     .title{
         padding: 20px;
+        width: 1200px;
     }
     .cuerpo{
         align-items: center;
@@ -243,6 +257,7 @@ body{
 @media (max-width: 700px) {
     .title{
         padding: 40px;
+        width: 600px;
     }
     .cuerpo{
         align-items: center;
