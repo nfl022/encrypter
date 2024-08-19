@@ -23,19 +23,22 @@ function toggleCopiarButton() {
    botonKopiar.style.display = outputValue ? "block" : "none";
 }
 
-function encriptar () {
-       mensajeUsuario = document.getElementById("textoUsuario").value;
-
-     if (mensajeUsuario !== ""){
-        mensajeFinal = syntaxEncript(mensajeUsuario);
-        document.querySelector("#output").value = mensajeFinal
-        toggleCopiarButton();
-        return mensajeFinal;
-     } else {
-        document.querySelector("#output").value = ""   
-           }
-           toggleCopiarButton();
+function encriptar() {
+   const inputTextarea = document.getElementById("textoUsuario");
+   const outputTextarea = document.querySelector("#output");
+   
+   if (inputTextarea.value !== "") {
+       const mensajeFinal = syntaxEncript(inputTextarea.value);
+       outputTextarea.value = mensajeFinal;
+   } else {
+       outputTextarea.value = "";
    }
+   toggleCopiarButton();
+   autoExpand(inputTextarea);
+   autoExpand(outputTextarea); 
+}
+
+
    document.querySelector("#textoUsuario").addEventListener("input", function() {
       encriptar();
 });
@@ -54,12 +57,15 @@ function encriptar () {
       if (mensajeUsuario != '') {  
          mensajeUsuario = document.getElementById("textoUsuario").value;
          mensajeFinal = syntaxDecript(mensajeUsuario)
-            
          document.querySelector("#output").value = mensajeFinal
          toggleCopiarButton();
+         autoExpand("output")
       }else{
          return ""; 
       }
+      toggleCopiarButton();
+      autoExpand(document.querySelector("#output"));
+      autoExpand(document.querySelector("#textoUsuario"));
    } 
    
    function swap() {
@@ -82,10 +88,16 @@ function encriptar () {
       isSwapped = !isSwapped;
   }
    function limpiarTexto(){
-       document.querySelector("#textoUsuario").value = "";
-       document.querySelector("#output").value = "";
+       const inputTextarea = document.querySelector("#textoUsuario")
+       const outputTextarea = document.querySelector("#output")
+       inputTextarea.value = "";
+      outputTextarea.value = "";
+
        contadorPalabras();
-       toggleCopiarButton();  
+       toggleCopiarButton();
+
+       autoExpand(inputTextarea);  
+       autoExpand(outputTextarea);
       
    }
 
@@ -121,7 +133,29 @@ function encriptar () {
             }
       
          }
-            document.getElementById("textoUsuario").addEventListener('input', contadorPalabras);
+         function autoExpand(textarea) {
+            if (!textarea || !textarea.style) {
+               return;
+           }
+            if (textarea.value.trim() === "") {
+               textarea.style.height = "280px";
+           } else {
+            textarea.style.height = "auto";
+            textarea.style.height = textarea.scrollHeight + 'px';
+           }
+         }
+
+         document.getElementById("textoUsuario").addEventListener('input', contadorPalabras);
+
+        document.getElementById("textoUsuario").addEventListener("input", function (event) {
+            if (event.target.tagName.toLowerCase() === 'textarea') {
+                autoExpand(this);
+                encriptar();
+            }
+        }); 
+        
+
+
 
 toggleCopiarButton();
 
