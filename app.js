@@ -70,18 +70,18 @@ function encriptar() {
    
    function swap() {
 
-      let mensajeUsuario = document.getElementById("textoUsuario").value;
-      let mensajeFinal = document.getElementById("output").value;
+      let inputTextarea = document.getElementById("textoUsuario").value;
+      let outputTextarea = document.getElementById("output").value;
   
       if (!isSwapped) {
-         document.getElementById("textoUsuario").value = syntaxEncript(mensajeUsuario)
-         document.getElementById("output").value = mensajeFinal;
+         document.getElementById("textoUsuario").value = syntaxEncript(inputTextarea)
+         document.getElementById("output").value = syntaxDecript(outputTextarea);
            
        } else {
-         mensajeUsuario = syntaxDecript(mensajeFinal);
-         document.getElementById("textoUsuario").value = mensajeUsuario;
-         mensajeFinal=syntaxEncript(mensajeUsuario);
-         document.getElementById("output").value = mensajeFinal;
+         inputTextarea = syntaxDecript(outputTextarea);
+         document.getElementById("textoUsuario").value = inputTextarea;
+        outputTextarea=syntaxEncript(inputTextarea);
+         document.getElementById("output").value = outputTextarea;
           
        }
    
