@@ -103,6 +103,7 @@ body {
     cursor: pointer;
     position: absolute;
     left: -15px;
+    bottom:-30px;
 }
 
 .botonSwap:hover {
@@ -161,7 +162,7 @@ body {
     .contenido {
         flex-direction: row;
         justify-content: space-between;
-        gap: 20px;
+        gap: 10px;
     }
 
     .contenedorInput, .output1 {
