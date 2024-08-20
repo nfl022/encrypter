@@ -41,20 +41,23 @@ body {
     justify-content: center;
     padding: 40px 20px;
     max-width: 100%;
+    
 }
 
 .swap-wrapper {
     margin-bottom: 20px;
+    position: relative;
 }
 
 .contenido {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
     width: 100%;
     max-width: 1200px;
-    padding: 0 10px;
+    padding: 10px;
+    position: relative;
 }
 
 .input-wrapper, .output-wrapper {
@@ -85,7 +88,12 @@ body {
     background-color: #f5f5f5;
     border: none;
 }
-
+.swap{
+    height: 23px;
+    width: 23px;
+    border-radius: 10px;
+    
+}
 .botonSwap {
     height: 30px;
     width: 30px;
@@ -93,6 +101,8 @@ body {
     background: none;
     border: none;
     cursor: pointer;
+    position: absolute;
+    left: -15px;
 }
 
 .botonSwap:hover {
@@ -114,7 +124,7 @@ body {
     background-color: var(--color-secundario);
 }
 
-.botonKopiar, .swap-wrapper {
+.botonKopiar {
     height: 35px;
     width: 35px;
     border-radius: 50%;
@@ -151,7 +161,7 @@ body {
     .contenido {
         flex-direction: row;
         justify-content: space-between;
-        gap: 10px;
+        gap: 20px;
     }
 
     .contenedorInput, .output1 {
@@ -168,6 +178,7 @@ body {
     }
     .contenido{
         flex-direction: column;
+        gap: 10px;
     }
     .contenedorInput, .output1 {
         font-size: 1.15rem;
@@ -184,7 +195,7 @@ body {
 
 @media (max-width: 480px) {
     .contenido{
-        gap: none;
+        gap: 10px;
     }
     .contenedorInput, .output1 {
         font-size: 1rem;
