@@ -15,7 +15,7 @@
 body {
     background: white;
     font-family: 'Roboto', sans-serif;
-    padding: 20px;
+    
 }
 
 .title {
@@ -39,8 +39,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 40px;
     max-width: 100%;
+    
     
 }
 
@@ -56,7 +57,9 @@ body {
     gap: 10px;
     width: 100%;
     max-width: 1200px;
-    padding: 10px;
+    min-height: 280px;
+    height: auto;
+    padding: 12px;
     position: relative;
 }
 
@@ -159,7 +162,10 @@ body {
     background-color: transparent;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+    .cuerpo{
+        padding: 20px 10px 10px 10px;
+    }
     .contenido {
         flex-direction: row;
         justify-content: space-between;
@@ -168,25 +174,25 @@ body {
 
     .contenedorInput, .output1 {
         font-size: 1.25rem;
-        min-height: 200px;
         min-height: 280px;
         height: auto;
         padding: 5% 7% 5% 5%;
     }
 }
 
-@media (max-width: 768px) {
-    .title{
-        
+@media (max-width: 613px) {
+    .cuerpo{
+        padding: 20px 10px 10px 10px;
     }
     .contenido{
         flex-direction: column;
-        gap: 10px;
+        gap: 0px;
     }
     .contenedorInput, .output1 {
         font-size: 1.15rem;
         padding: 5% 6% 5% 5%;
         min-height: 280px;
+        width: 100%;
         height: auto;
         
     }
@@ -197,13 +203,40 @@ body {
 }
 
 @media (max-width: 480px) {
+    .cuerpo{
+        padding: 20px 10px 10px 10px;
+    }
     .contenido{
         gap: 0px;
+        flex-direction: column;
     }
     .contenedorInput, .output1 {
         font-size: 1rem;
         padding: 5% 7% 5% 5%;
-        min-height: 280px;
+     
+        width: 100%;
+        height: auto;
+    }
+
+    .titulo {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 376px) {
+    
+    .cuerpo{
+        padding: 10px;
+    }
+    .contenido{
+        gap: 0px;
+        flex-direction: column;
+        
+    }
+    .contenedorInput, .output1 {
+        font-size: 1rem;
+        padding: 5% 9% 9% 5%;
+        min-height: 260px;
+        width: 100%;
         height: auto;
     }
 
