@@ -33,7 +33,7 @@
 
 :triangular_flag_on_post: `Funcionalidad 2:` Contador palabras
 
-:triangular_flag_on_post: `Funcionalidad 3:` Plotar gráfico com histórico dos níveis glicêmicos do paciente.
+:triangular_flag_on_post: `Funcionalidad 3:` Swap entre texto encriptado y desencriptado
 
 :triangular_flag_on_post: `Funcionalidad 4:` Copiar texto.
 
