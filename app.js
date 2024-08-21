@@ -28,31 +28,33 @@ function syntaxDecript (mensajeFinal) {
 function encriptar() {
    const inputTextarea = document.getElementById("textoUsuario");
    const outputTextarea = document.querySelector("#output");
-   
+
    if (inputTextarea.value !== "") {
        const mensajeFinal = syntaxEncript(inputTextarea.value);
        outputTextarea.value = mensajeFinal;
    } else {
        outputTextarea.value = "";
    }
+
    toggleCopiarButton();
    autoExpand(inputTextarea);
-   autoExpand(outputTextarea); 
+   autoExpand(outputTextarea);
 }
-function desencriptar () {
-   if (mensajeUsuario != '') {  
-      mensajeUsuario = document.getElementById("textoUsuario").value;
-      mensajeFinal = syntaxDecript(mensajeUsuario)
-      document.querySelector("#output").value = mensajeFinal
-      toggleCopiarButton();
-      autoExpand("output")
-   }else{
-      return ""; 
+function desencriptar() {
+   const inputTextarea = document.getElementById("textoUsuario");
+   const outputTextarea = document.querySelector("#output");
+
+   if (inputTextarea.value !== "") {
+       const mensajeFinal = syntaxDecript(inputTextarea.value);
+       outputTextarea.value = mensajeFinal;
+   } else {
+       outputTextarea.value = "";
    }
+
    toggleCopiarButton();
-   autoExpand(document.querySelector("#output"));
-   autoExpand(document.querySelector("#textoUsuario"));
-} 
+   autoExpand(inputTextarea);
+   autoExpand(outputTextarea);
+}
    document.querySelector("#textoUsuario").addEventListener("input", function() {
       encriptar();
 });
