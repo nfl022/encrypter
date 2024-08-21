@@ -16,13 +16,15 @@ function syntaxEncript(palabraEncriptada){
     .replace (/a/g, "ai")
     return palabraNormal;
 }
-function toggleCopiarButton() {
-   const botonKopiar = document.getElementById("copiar");
-   const outputValue = document.querySelector("#output").value.trim();
-   
-   botonKopiar.style.display = outputValue ? "block" : "none";
+function syntaxDecript (mensajeFinal) {
+   let mensajeDesencriptado   =  mensajeFinal
+      .replace (/ufat/g, "u")
+      .replace (/ober/g, "o")
+      .replace (/imes/g, "i")
+      .replace (/ai/g, "a")
+      .replace (/enter/g, "e")
+      return mensajeDesencriptado;
 }
-
 function encriptar() {
    const inputTextarea = document.getElementById("textoUsuario");
    const outputTextarea = document.querySelector("#output");
@@ -37,54 +39,48 @@ function encriptar() {
    autoExpand(inputTextarea);
    autoExpand(outputTextarea); 
 }
-
-
+function desencriptar () {
+   if (mensajeUsuario != '') {  
+      mensajeUsuario = document.getElementById("textoUsuario").value;
+      mensajeFinal = syntaxDecript(mensajeUsuario)
+      document.querySelector("#output").value = mensajeFinal
+      toggleCopiarButton();
+      autoExpand("output")
+   }else{
+      return ""; 
+   }
+   toggleCopiarButton();
+   autoExpand(document.querySelector("#output"));
+   autoExpand(document.querySelector("#textoUsuario"));
+} 
    document.querySelector("#textoUsuario").addEventListener("input", function() {
       encriptar();
 });
- 
-   function syntaxDecript (mensajeFinal) {
-      let mensajeDesencriptado   =  mensajeFinal
-         .replace (/ufat/g, "u")
-         .replace (/ober/g, "o")
-         .replace (/imes/g, "i")
-         .replace (/ai/g, "a")
-         .replace (/enter/g, "e")
-         return mensajeDesencriptado;
-   }
-        
-   function desencriptar () {
-      if (mensajeUsuario != '') {  
-         mensajeUsuario = document.getElementById("textoUsuario").value;
-         mensajeFinal = syntaxDecript(mensajeUsuario)
-         document.querySelector("#output").value = mensajeFinal
-         toggleCopiarButton();
-         autoExpand("output")
-      }else{
-         return ""; 
-      }
-      toggleCopiarButton();
-      autoExpand(document.querySelector("#output"));
-      autoExpand(document.querySelector("#textoUsuario"));
-   } 
+document.getElementById("textoUsuario").addEventListener("input", function(event) {
+   const inputTextarea = event.target;
+   inputField.value = inputField.value.replace(/[^a-z\s]/g, '');
+});
+     
+function toggleCopiarButton() {
+   const botonKopiar = document.getElementById("copiar");
+   const outputValue = document.querySelector("#output").value.trim();
+   
+   botonKopiar.style.display = outputValue ? "block" : "none";
+}
    
    function swap() {
 
       let inputTextarea = document.getElementById("textoUsuario").value;
       let outputTextarea = document.getElementById("output").value;
-  
       if (!isSwapped) {
          document.getElementById("textoUsuario").value = syntaxEncript(inputTextarea)
-         document.getElementById("output").value = syntaxDecript(outputTextarea);
-           
+         document.getElementById("output").value = syntaxDecript(outputTextarea);    
        } else {
          inputTextarea = syntaxDecript(outputTextarea);
          document.getElementById("textoUsuario").value = inputTextarea;
         outputTextarea=syntaxEncript(inputTextarea);
-         document.getElementById("output").value = outputTextarea;
-          
+         document.getElementById("output").value = outputTextarea;  
        }
-   
       isSwapped = !isSwapped;
   }
    function limpiarTexto(){
@@ -109,8 +105,7 @@ function encriptar() {
             } catch (err) {
                console.error("Failed to copy", err)
             };
-            toggleCopiarButton();
-            
+            toggleCopiarButton(); 
          }
 
          function contadorPalabras (){
@@ -154,9 +149,6 @@ function encriptar() {
             }
         }); 
         
-
-
-
 toggleCopiarButton();
 
 
