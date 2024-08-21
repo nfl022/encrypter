@@ -57,8 +57,8 @@ function desencriptar () {
       encriptar();
 });
 document.getElementById("textoUsuario").addEventListener("input", function(event) {
-   const inputTextarea = event.target;
-   inputTextarea.value = inputTextarea.value.replace(/[^a-z\s]/g, '');
+   const inputField = event.target;
+   inputField.value = inputField.value.replace(/[^a-z\s]/g, '');
 });
      
 function toggleCopiarButton() {
