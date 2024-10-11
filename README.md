@@ -39,7 +39,7 @@
 
 ## Aplicación
 
-<p align="center"><img src="https://github.com/user-attachments/assets/00f69da4-9e89-43a9-8ac2-266577eca624" width="800" height="auto" alt="gif"></p
+<p align="center"><img src="https://github.com/user-attachments/assets/00f69da4-9e89-43a9-8ac2-266577eca624" width="800" height="auto" alt="gif"></p>
 
 ##
                                                                                                                                                   
